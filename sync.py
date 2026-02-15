@@ -132,6 +132,7 @@ def cpu_worker(batch: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     processed = []
     for record in batch:
         processed.append(simulate_cpu_heavy_task(record))
+    print("Processed records=",processed)
     return processed
 
 
